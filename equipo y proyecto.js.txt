@@ -1,0 +1,59 @@
+codigo conexion db seccion equipo
+
+const equipo = db.define('equipos', {
+  id:{ type:Sequelize.NUMBER,
+    primaryKey:true,
+    autoIncrement:true,
+    allowNull:false,},
+  img:{type: Sequelize.STRING},
+  nombre:{type: Sequelize.STRING},
+  redes:{type: Sequelize.STRING},
+  bio:{type: Sequelize.STRING},
+})
+router.get('/', async(req, res) => {
+  const consultaEquipo = await equipo.findAll()
+  console.log(consultaEquipo)
+  res.render('equipo', { title: 'Equipo', equipo:consultaEquipo });
+});
+
+
+
+
+Codigo conexion db seccion proyecto
+
+var galeria = db.define('galeria',{
+  id:{
+    type:Sequelize.NUMBER,
+    primaryKey:true,
+    autoIncrement:true,
+    allowNull:false,
+  },
+  titulo:{
+    type: Sequelize.STRING
+  },
+  descripcion:{
+    type: Sequelize.STRING
+  },
+   img1:{
+     type: Sequelize.STRING
+   },
+  img2:{
+    type: Sequelize.STRING
+  },
+  img3:{
+    type: Sequelize.STRING
+  },
+  img4:{
+    type: Sequelize.STRING
+  },
+})
+
+router.get('/', async(req, res) =>{
+ 
+
+  var consultaGaleria = await galeria.findAll()
+  console.log(consultaGaleria)
+
+
+  res.render('proyectos', { title: 'Proyectos', galeria:consultaGaleria  });
+});
