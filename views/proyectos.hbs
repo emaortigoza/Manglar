@@ -1,0 +1,41 @@
+
+<div class='container mt-4'>
+    <div class=" container-fluid p-5">
+        </div>
+        <hr>
+  <h1>{{title}}</h1>
+    <hr>
+ 
+    <section id="galeria" class="container">
+      {{#each proyectos}}
+      
+      <div class="text-center pt-2 mb-5">
+        <h3>{{titulo}}</h3>
+        <p>{{descripcion}}</p>
+        <div class="row">
+          <div class="col-lg-5 mb-2">
+            <a data-fancybox="gallery" href="/images/{{img1}}">
+              <img src="/images/{{img1}}" alt="Galeria imagenes">
+            </a>
+          </div>
+          <div class="col-lg-5">
+            <a data-fancybox="gallery" href="/images/{{img2}}">
+            <img src="/images/{{img2}}" alt="Galeria imagenes">
+            </a>
+          </div>
+          <div class="col-lg-5">
+            <a data-fancybox="gallery" href="/images/{{img3}}">
+            <img src="/images/{{img3}}" alt="Galeria imagenes">
+            </a>
+          </div>
+          <div class="col-lg-5">
+            <a data-fancybox="gallery" href="/images/{{img4}}">
+            <img src="/images/{{img4}}" alt="Galeria imagenes">
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr>
+{{/each}}
+    </section>
+</div>
